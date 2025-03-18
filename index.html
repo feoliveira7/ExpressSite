@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Framework</title>
+    <!-- Link para a fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Resetando margens e paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Definindo a fonte Poppins e o fundo escuro */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* Navegação */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Seções */
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        p, ul {
+            color: #d1d1d1;
+        }
+
+        /* Código */
+        pre {
+            background-color: #333;
+            color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Express Framework</h1>
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#vantagens">Vantagens</a></li>
+                <li><a href="#exemplo">Exemplo Básico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introducao">
+        <h2>O que é o Express?</h2>
+        <p>O <strong>Express</strong> é um framework minimalista para Node.js, que facilita a criação de servidores e APIs. Com ele, é possível criar aplicações web de forma rápida e sem muita complexidade.</p>
+    </section>
+    
+    <section id="vantagens">
+        <h2>Vantagens do Express</h2>
+        <ul>
+            <li><strong>Minimalismo:</strong> O Express é minimalista e permite que você adicione apenas o que realmente precisa para o seu projeto.</li>
+            <li><strong>Roteamento:</strong> Facilita o roteamento de URLs e a manipulação de requisições HTTP.</li>
+            <li><strong>Extensível:</strong> O Express pode ser facilmente estendido com middleware para adicionar funcionalidades como autenticação, logging, entre outros.</li>
+            <li><strong>Comunitário:</strong> O Express tem uma grande comunidade, com muitos tutoriais e pacotes disponíveis para resolver diversos problemas.</li>
+        </ul>
+    </section>
+
+    <section id="exemplo">
+        <h2>Exemplo Básico de Código</h2>
+        <pre>
+            <code>
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Olá, Express!');
+});
+
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000');
+});
+            </code>
+        </pre>
+        <p>Este é um exemplo simples de como criar um servidor Express que responde com "Olá, Express!" quando a rota raiz ("/") é acessada.</p>
+    </section>
+
+    <footer>
+        <p>Aprenda mais sobre Express no <a href="https://expressjs.com/" target="_blank">site oficial</a>.</p>
+    </footer>
+</body>
+</html>
